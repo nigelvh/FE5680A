@@ -16,9 +16,13 @@ Options:
   --debug  \- Print additional debugging info.
 ```
 `--dev` is used to set what serial device should be used to communicate with the reference, and is a required option.
+
 `--set` is used to configure the offset on the reference. This is given in a raw integer value between -2147483647 and 2147483647. Do *NOT* enter your desired Hz offset here. You will need to either calculate the desired ratio, or trial and error your value until you reach the desired calibration.
+
 `--save` is used to save the `--set` value to EEPROM to survive future power cycles. `--save` *MUST* be used in combination with `--set`.
+
 `--get` is used to read the current offset value from the device. This is a default option and will be run if no options are set, as well as after any `--set` operation, as the device does not return confirmation data from a `--set` command alone.
+
 `--debug` outputs additional debugging data consisting of the raw hexadecimal values for commands being sent to the device as well as the device response data.
 
 ### Example Get
